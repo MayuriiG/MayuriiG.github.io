@@ -1,1 +1,166 @@
 # MayuriiG.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awwwards Style Landing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0d0d0d;
+}
+
+header h1 {
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #00c896;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.hero-buttons a {
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.visit {
+    background: #00c896;
+    color: white;
+}
+
+.collect {
+    border: 1px solid white;
+    color: white;
+}
+
+/* Rating Section */
+.ratings {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.rating-box {
+    text-align: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #00c896;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>awwwards.</h1>
+    <nav>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#" class="btn">Submit Your Site</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>The Outpost</h2>
+        <p>Specialists in VFX and animation productions. We are visual pioneers.</p>
+
+        <div class="hero-buttons">
+            <a href="#" class="visit">Visit Site</a>
+            <a href="#" class="collect">Collect</a>
+        </div>
+
+        <div class="ratings">
+            <div class="rating-box">
+                <div class="circle">7.6</div>
+                <small>Design</small>
+            </div>
+
+            <div class="rating-box">
+                <div class="circle">7.2</div>
+                <small>Usability</small>
+            </div>
+
+            <div class="rating-box">
+                <div class="circle">7.9</div>
+                <small>Creativity</small>
+            </div>
+
+            <div class="rating-box">
+                <div class="circle">7.8</div>
+                <small>Content</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
