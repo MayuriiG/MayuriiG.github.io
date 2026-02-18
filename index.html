@@ -5,16 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Awwwards Style Architect Landing</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
 body { background: #111; color: white; overflow-x: hidden; }
 
 /* Header */
 header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #0d0d0d; position: fixed; width: 100%; z-index: 10; }
-header h1 { font-weight: 700; }
-nav a { color: white; text-decoration: none; margin-left: 25px; font-size: 14px; }
+header h1, .hero h2, .featured-content h2 {
+    font-weight: 700; /* bold headings */
+}
+
+p, nav a, .featured-content p, .featured-content ul li {
+    font-weight: 300; /* light, elegant text */
+    letter-spacing: 0.5px; /* optional: adds sophistication */
+}
+
 .btn { padding: 8px 16px; border-radius: 20px; background: #00c896; color: white; }
 
 /* Hero Section */
