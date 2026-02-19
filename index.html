@@ -1,161 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elyse Residence</title>
-  <style>
-    /* ===== Base Styles ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "Georgia", serif;
-      color: #F5F5F3;
-      background: #0A0A0A;
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architect Portfolio</title>
 
-    /* ===== Page Container ===== */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    /* ===== Hero Section ===== */
-    .hero {
-      position: relative;
-      height: 90vh;
-      background: url('hero-image.jpg') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .hero-content {
-      position: relative;
-      color: #F5F5F3;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      letter-spacing: 1.2px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 28px;
-      border: 2px solid #F5F5F3;
-      font-size: 1rem;
-      transition: 0.3s ease;
-    }
-    .btn:hover {
-      background: #F5F5F3;
-      color: #0A0A0A;
-    }
+body{
+    font-family: Georgia, serif;
+    background:#f6f4f1;
+    color:#222;
+}
 
-    /* ===== Content Section ===== */
-    .section {
-      padding: 60px 0;
-    }
-    .section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      text-align: center;
-      color: #FBFBFB;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .card {
-      background: #313945;
-      border-radius: 8px;
-      overflow: hidden;
-      color: #F5F5F3;
-    }
-    .card img {
-      width: 100%;
-      display: block;
-    }
-    .card-body {
-      padding: 18px;
-    }
-    .card-body h3 {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
-    .card-body p {
-      font-size: 1rem;
-    }
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 80px;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:fixed;
+    width:100%;
+    z-index:10;
+}
 
-    /* ===== Footer ===== */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #9C9D9C;
-    }
-  </style>
+.logo{
+    font-size:22px;
+    letter-spacing:2px;
+    color:#1e3a8a;
+    font-weight:bold;
+}
+
+nav a{
+    text-decoration:none;
+    color:#444;
+    margin-left:30px;
+    font-size:14px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#1e3a8a;
+}
+
+/* HERO SECTION */
+.hero{
+    height:75vh;
+    background: url('https://images.unsplash.com/photo-1505842674515-2e2fa54ee96b?crop=entropy&cs=tinysrgb&fit=max&w=1920') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:100px;
+    color:white;
+    position:relative;
+    margin-top:90px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.hero-content{
+    max-width:600px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.hero p{
+    font-size:16px;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    background:#1e3a8a;
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    border-radius:25px;
+    transition:transform 0.3s;
+    display:inline-block;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* PROJECTS SECTION */
+.projects{
+    padding:100px 80px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+}
+
+.project-card{
+    position:relative;
+    width:300px;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    background:white;
+    transition:transform 0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    font-size:20px;
+    margin-bottom:10px;
+    color:#111;
+}
+
+.project-content p{
+    font-size:14px;
+    line-height:1.5;
+    color:#444;
+}
+
+/* CONTACT SECTION */
+.contact{
+    padding:80px 80px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:30px;
+    color:#1e3a8a;
+    margin-bottom:30px;
+}
+
+.contact p, .contact a{
+    font-size:16px;
+    color:#222;
+    margin-bottom:10px;
+    display:block;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    color:#1e3a8a;
+}
+
+/* Footer */
+footer{
+    padding:40px 80px;
+    text-align:center;
+    background:#fff;
+    color:#444;
+    border-top:1px solid #eee;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content container">
-      <h1>Elyse Residence</h1>
-      <p>Where timeless refinement meets modern living. Explore luxury homes crafted for discerning lifestyles.</p>
-      <a href="#properties" class="btn">View Properties</a>
-    </div>
-  </section>
+<header>
+    <div class="logo">MayuriiG Architects</div>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#">About</a>
+    </nav>
+</header>
 
-  <!-- Featured Homes -->
-  <section id="properties" class="section container">
-    <h2>Featured Properties</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="house1.jpg" alt="Luxury Home 1">
-        <div class="card-body">
-          <h3>Modern Penthouse</h3>
-          <p>Stunning views & state-of-the-art design in the city’s heart.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="house2.jpg" alt="Luxury Home 2">
-        <div class="card-body">
-          <h3>Serene Villa</h3>
-          <p>Elegant living space with pristine landscape and amenities.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="house3.jpg" alt="Luxury Home 3">
-        <div class="card-body">
-          <h3>Grand Estate</h3>
-          <p>Exclusive estate combining comfort with sophistication.</p>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>We design rooted to nature</h1>
+        <p>Architecture that harmonizes modern elegance with natural surroundings.</p>
+        <a href="#projects" class="btn">Explore Projects</a>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    © 2026 Elyse Residence • Designed for Luxury Living
-  </footer>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1521554874469-744ad89d68be?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Mediterranean Villa">
+        <div class="project-content">
+            <h3>Mediterranean Villa</h3>
+            <p>Traditional Mediterranean architecture blended with modern luxury and eco-friendly materials.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Mountain Retreat">
+        <div class="project-content">
+            <h3>Mountain Retreat</h3>
+            <p>A serene retreat built into the mountainside, using natural stone and timber to integrate with the landscape.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1570129477491-0d4b0c3f0ffb?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Modern Beach House">
+        <div class="project-content">
+            <h3>Modern Beach House</h3>
+            <p>Open-plan living spaces with floor-to-ceiling glass, connecting interior to ocean views seamlessly.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:info@mayuriig.com">info@mayuriig.com</a></p>
+    <p>Phone: <a href="tel:+1234567890">+1 911000 0090</a></p>
+    <p>Feel free to reach out for inquiries or collaborations.</p>
+</section>
+
+<footer>
+    &copy; 2026 MayuriiG Architects. All Rights Reserved.
+</footer>
 
 </body>
 </html>
