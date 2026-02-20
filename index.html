@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Architect Portfolio</title>
+<title>Elegant & Comfort</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -13,238 +16,269 @@
 }
 
 body{
-    font-family: Georgia, serif;
-    background:#f6f4f1;
-    color:#222;
-}
-
-/* NAVBAR */
-header{
+    font-family:'Inter', sans-serif;
+    background: linear-gradient(135deg,#d2b48c,#b08d6a);
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 80px;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:fixed;
-    width:100%;
-    z-index:10;
+    justify-content:center;
+    padding:40px 0;
 }
 
-.logo{
-    font-size:22px;
-    letter-spacing:2px;
-    color:#1e3a8a;
-    font-weight:bold;
+/* Main Card Container */
+.container{
+    width:90%;
+    max-width:1000px;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,0.2);
+    position:relative;
+}
+
+/* Top Badges */
+.badge{
+    position:absolute;
+    top:20px;
+    background:#f5f5f5;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.badge.left{
+    left:20px;
+}
+
+.badge.right{
+    right:20px;
+}
+
+/* Navbar */
+nav{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    padding:10px 25px;
+    border-radius:30px;
 }
 
 nav a{
     text-decoration:none;
-    color:#444;
-    margin-left:30px;
+    margin:0 15px;
+    color:#333;
     font-size:14px;
-    font-weight:500;
 }
 
-nav a:hover{
-    color:#1e3a8a;
-}
-
-/* HERO SECTION */
+/* Hero Section */
 .hero{
-    height:75vh;
-    background: url('https://images.unsplash.com/photo-1505842674515-2e2fa54ee96b?crop=entropy&cs=tinysrgb&fit=max&w=1920') center/cover no-repeat;
+    height:450px;
+    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
     display:flex;
     align-items:center;
-    padding-left:100px;
-    color:white;
+    justify-content:flex-end;
+    padding:60px;
     position:relative;
-    margin-top:90px;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:rgba(0,0,0,0.35);
-}
-
-.hero-content{
-    max-width:600px;
-    position:relative;
-    z-index:1;
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:20px;
-    line-height:1.1;
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    color:white;
+    text-align:right;
 }
 
-.hero p{
-    font-size:16px;
+/* Content Section */
+.content{
+    padding:50px 60px;
+    background:#f5eee6;
+}
+
+.content h2{
+    font-family:'Playfair Display', serif;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.content p{
+    text-align:center;
+    font-size:14px;
+    color:#555;
     margin-bottom:25px;
-    line-height:1.6;
 }
 
 .btn{
-    padding:12px 25px;
+    display:block;
+    margin:20px auto;
+    padding:10px 25px;
+    border-radius:20px;
     border:none;
-    background:#1e3a8a;
-    text-decoration:none;
+    background:black;
     color:white;
-    font-size:14px;
-    border-radius:25px;
-    transition:transform 0.3s;
-    display:inline-block;
+    cursor:pointer;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-}
-
-/* PROJECTS SECTION */
-.projects{
-    padding:100px 80px;
+/* Stats Section */
+.stats{
     display:flex;
-    flex-wrap:wrap;
+    justify-content:space-around;
+    margin-top:40px;
+    text-align:center;
+}
+
+.stats div h3{
+    font-size:24px;
+}
+
+.stats div span{
+    font-size:12px;
+    color:#777;
+}
+
+/* Features */
+.features{
+    display:flex;
+    justify-content:space-between;
+    margin-top:50px;
     gap:40px;
-    justify-content:center;
 }
 
-.project-card{
-    position:relative;
-    width:300px;
-    overflow:hidden;
-    border-radius:15px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
-    background:white;
-    transition:transform 0.3s;
+.features h4{
+    margin-bottom:10px;
 }
 
-.project-card:hover{
-    transform:translateY(-10px);
+.features ul{
+    font-size:14px;
+    line-height:1.6;
+    color:#555;
 }
 
-.project-card img{
+/* Gallery */
+.gallery{
+    padding:50px 60px;
+}
+
+.gallery h3{
+    margin-bottom:20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-grid img{
     width:100%;
+    border-radius:15px;
     height:200px;
     object-fit:cover;
 }
 
-.project-content{
-    padding:20px;
+/* Floating Buttons */
+.float-btn{
+    position:absolute;
+    right:20px;
+    bottom:40px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    cursor:pointer;
 }
 
-.project-content h3{
-    font-size:20px;
-    margin-bottom:10px;
-    color:#111;
-}
-
-.project-content p{
-    font-size:14px;
-    line-height:1.5;
-    color:#444;
-}
-
-/* CONTACT SECTION */
-.contact{
-    padding:80px 80px;
-    text-align:center;
-}
-
-.contact h2{
-    font-size:30px;
-    color:#1e3a8a;
-    margin-bottom:30px;
-}
-
-.contact p, .contact a{
-    font-size:16px;
-    color:#222;
-    margin-bottom:10px;
-    display:block;
-    text-decoration:none;
-}
-
-.contact a:hover{
-    color:#1e3a8a;
-}
-
-/* Footer */
-footer{
-    padding:40px 80px;
-    text-align:center;
-    background:#fff;
-    color:#444;
-    border-top:1px solid #eee;
-    font-size:14px;
+.float-btn.second{
+    bottom:110px;
 }
 </style>
 </head>
-
 <body>
 
-<header>
-    <div class="logo">MayuriiG Architects</div>
+<div class="container">
+
+    <div class="badge left">By Your Name</div>
+    <div class="badge right">Telegram: @yourhandle</div>
+
     <nav>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#">Home</a>
         <a href="#">About</a>
+        <a href="#">Contact</a>
     </nav>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>We design rooted to nature</h1>
-        <p>Architecture that harmonizes modern elegance with natural surroundings.</p>
-        <a href="#projects" class="btn">Explore Projects</a>
-    </div>
-</section>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Elegant &<br>Comfort</h1>
+    </section>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-    <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1521554874469-744ad89d68be?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Mediterranean Villa">
-        <div class="project-content">
-            <h3>Mediterranean Villa</h3>
-            <p>Traditional Mediterranean architecture blended with modern luxury and eco-friendly materials.</p>
+    <!-- Content -->
+    <section class="content">
+        <h2>INTERIOR TO YOUR TASTE</h2>
+        <p>We will create comfort and coziness in your house</p>
+        <button class="btn">View More</button>
+
+        <div class="stats">
+            <div>
+                <h3>15+</h3>
+                <span>Projects</span>
+            </div>
+            <div>
+                <h3>35+</h3>
+                <span>Customers</span>
+            </div>
+            <div>
+                <h3>97%</h3>
+                <span>Customer Retention</span>
+            </div>
+            <div>
+                <h3>50+</h3>
+                <span>Products</span>
+            </div>
         </div>
-    </div>
 
-    <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Mountain Retreat">
-        <div class="project-content">
-            <h3>Mountain Retreat</h3>
-            <p>A serene retreat built into the mountainside, using natural stone and timber to integrate with the landscape.</p>
+        <div class="features">
+            <div>
+                <h4>Inside The House</h4>
+                <ul>
+                    <li>2 types of kitchen</li>
+                    <li>2 bedrooms, 1 upstairs</li>
+                    <li>3 bathrooms</li>
+                    <li>Long corridor</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Outside House</h4>
+                <ul>
+                    <li>2 cars parking</li>
+                    <li>Backyard pool</li>
+                    <li>Landscaped garden</li>
+                    <li>Exterior care</li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1570129477491-0d4b0c3f0ffb?crop=entropy&cs=tinysrgb&fit=max&w=600" alt="Modern Beach House">
-        <div class="project-content">
-            <h3>Modern Beach House</h3>
-            <p>Open-plan living spaces with floor-to-ceiling glass, connecting interior to ocean views seamlessly.</p>
+    <!-- Gallery -->
+    <section class="gallery">
+        <h3>Here you can see our interior</h3>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115">
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:info@mayuriig.com">info@mayuriig.com</a></p>
-    <p>Phone: <a href="tel:+1234567890">+1 911000 0090</a></p>
-    <p>Feel free to reach out for inquiries or collaborations.</p>
-</section>
+    <!-- Floating Buttons -->
+    <div class="float-btn">↑</div>
+    <div class="float-btn second">☾</div>
 
-<footer>
-    &copy; 2026 MayuriiG Architects. All Rights Reserved.
-</footer>
+</div>
 
 </body>
 </html>
