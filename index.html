@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elegant & Comfort</title>
+<title>Mayuri G Architect</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -23,7 +22,7 @@ body{
     padding:40px 0;
 }
 
-/* Main Card Container */
+/* Main Container */
 .container{
     width:90%;
     max-width:1000px;
@@ -58,7 +57,7 @@ nav{
     top:20px;
     left:50%;
     transform:translateX(-50%);
-    background:rgba(255,255,255,0.8);
+    background:rgba(255,255,255,0.85);
     backdrop-filter:blur(10px);
     padding:10px 25px;
     border-radius:30px;
@@ -71,15 +70,14 @@ nav a{
     font-size:14px;
 }
 
-/* Hero Section */
+/* Hero Section (Mediterranean Interior) */
 .hero{
     height:450px;
-    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+    background:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:flex-end;
     padding:60px;
-    position:relative;
 }
 
 .hero h1{
@@ -119,7 +117,7 @@ nav a{
     cursor:pointer;
 }
 
-/* Stats Section */
+/* Stats */
 .stats{
     display:flex;
     justify-content:space-around;
@@ -176,6 +174,32 @@ nav a{
     object-fit:cover;
 }
 
+/* Contact Section */
+.contact{
+    background:#f5eee6;
+    padding:50px 60px;
+    text-align:center;
+}
+
+.contact h3{
+    font-family:'Playfair Display', serif;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:8px 0;
+    color:#555;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+}
+
 /* Floating Buttons */
 .float-btn{
     position:absolute;
@@ -201,12 +225,13 @@ nav a{
 
 <div class="container">
 
-    <div class="badge left">By Your Name</div>
-    <div class="badge right">Telegram: @yourhandle</div>
+    <div class="badge left">Mayuri G Architect</div>
+    <div class="badge right">Design Studio</div>
 
     <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
+        <a href="#">Projects</a>
         <a href="#">Contact</a>
     </nav>
 
@@ -218,7 +243,7 @@ nav a{
     <!-- Content -->
     <section class="content">
         <h2>INTERIOR TO YOUR TASTE</h2>
-        <p>We will create comfort and coziness in your house</p>
+        <p>We create comfort and Mediterranean-inspired elegance in your home.</p>
         <button class="btn">View More</button>
 
         <div class="stats">
@@ -244,20 +269,20 @@ nav a{
             <div>
                 <h4>Inside The House</h4>
                 <ul>
-                    <li>2 types of kitchen</li>
-                    <li>2 bedrooms, 1 upstairs</li>
-                    <li>3 bathrooms</li>
-                    <li>Long corridor</li>
+                    <li>Open Mediterranean kitchen</li>
+                    <li>2 spacious bedrooms</li>
+                    <li>3 modern bathrooms</li>
+                    <li>Natural light corridors</li>
                 </ul>
             </div>
 
             <div>
                 <h4>Outside House</h4>
                 <ul>
-                    <li>2 cars parking</li>
-                    <li>Backyard pool</li>
-                    <li>Landscaped garden</li>
-                    <li>Exterior care</li>
+                    <li>2 car parking</li>
+                    <li>Private garden area</li>
+                    <li>Stone patio seating</li>
+                    <li>Luxury exterior finishing</li>
                 </ul>
             </div>
         </div>
@@ -265,14 +290,26 @@ nav a{
 
     <!-- Gallery -->
     <section class="gallery">
-        <h3>Here you can see our interior</h3>
+        <h3>Our Interior Projects</h3>
         <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
-            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea">
-            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154">
-            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80">
         </div>
     </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <h3>Get In Touch</h3>
+        <p>Email: info@mayurigarchitect.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Mayuri G Architect. All Rights Reserved.
+    </footer>
 
     <!-- Floating Buttons -->
     <div class="float-btn">↑</div>
