@@ -33,7 +33,7 @@ body{
     position:relative;
 }
 
-/* Top Badges */
+/* Badges */
 .badge{
     position:absolute;
     top:22px;
@@ -42,14 +42,8 @@ body{
     border-radius:20px;
     font-size:12px;
 }
-
-.badge.left{
-    left:20px;
-}
-
-.badge.right{
-    right:20px;
-}
+.badge.left{ left:20px; }
+.badge.right{ right:20px; }
 
 /* Navbar */
 nav{
@@ -62,7 +56,6 @@ nav{
     padding:10px 25px;
     border-radius:30px;
 }
-
 nav a{
     text-decoration:none;
     margin:0 15px;
@@ -70,16 +63,15 @@ nav a{
     font-size:14px;
 }
 
-/* Hero Section (Mediterranean Interior) */
+/* Hero */
 .hero{
     height:450px;
-    background:url('https://seekpretty.com/wp-content/uploads/2024/12/a-photo-of-a-mediterranean-style-room-wi_S5BU0JB0SJagqGgwTdWbzw_dhfBLhPfTtKBvse-Ddbn9Q.png') center/cover no-repeat;
+    background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:flex-end;
     padding:60px;
 }
-
 .hero h1{
     font-family:'Playfair Display', serif;
     font-size:48px;
@@ -87,25 +79,22 @@ nav a{
     text-align:right;
 }
 
-/* Content Section */
+/* Content */
 .content{
     padding:50px 60px;
     background:#f5eee6;
 }
-
 .content h2{
     font-family:'Playfair Display', serif;
     text-align:center;
     margin-bottom:10px;
 }
-
 .content p{
     text-align:center;
     font-size:14px;
     color:#555;
     margin-bottom:25px;
 }
-
 .btn{
     display:block;
     margin:20px auto;
@@ -124,15 +113,8 @@ nav a{
     margin-top:40px;
     text-align:center;
 }
-
-.stats div h3{
-    font-size:24px;
-}
-
-.stats div span{
-    font-size:12px;
-    color:#777;
-}
+.stats h3{ font-size:24px; }
+.stats span{ font-size:12px; color:#777; }
 
 /* Features */
 .features{
@@ -141,32 +123,45 @@ nav a{
     margin-top:50px;
     gap:40px;
 }
-
-.features h4{
-    margin-bottom:10px;
-}
-
 .features ul{
     font-size:14px;
     line-height:1.6;
     color:#555;
 }
 
+/* Video Section */
+.video-section{
+    padding:60px;
+    text-align:center;
+    background:white;
+}
+.video-section h3{
+    font-family:'Playfair Display', serif;
+    margin-bottom:30px;
+}
+.video-wrapper{
+    max-width:900px;
+    margin:0 auto;
+}
+.video-wrapper iframe{
+    width:100%;
+    height:500px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
 /* Gallery */
 .gallery{
     padding:50px 60px;
 }
-
 .gallery h3{
     margin-bottom:20px;
 }
-
 .gallery-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
-
 .gallery-grid img{
     width:100%;
     border-radius:15px;
@@ -174,18 +169,16 @@ nav a{
     object-fit:cover;
 }
 
-/* Contact Section */
+/* Contact */
 .contact{
     background:#f5eee6;
     padding:50px 60px;
     text-align:center;
 }
-
 .contact h3{
     font-family:'Playfair Display', serif;
     margin-bottom:20px;
 }
-
 .contact p{
     margin:8px 0;
     color:#555;
@@ -199,121 +192,98 @@ footer{
     padding:20px;
     font-size:13px;
 }
-
-/* Floating Buttons */
-.float-btn{
-    position:absolute;
-    right:20px;
-    bottom:40px;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
-    cursor:pointer;
-}
-
-.float-btn.second{
-    bottom:110px;
-}
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="badge left">MayuriiG Architect</div>
-    <div class="badge right">Design Studio</div>
+<div class="badge left">MayuriiG Architect</div>
+<div class="badge right">Design Studio</div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Elegant &<br>Comfort</h1>
-    </section>
+<!-- Hero -->
+<section class="hero">
+<h1>Elegant &<br>Comfort</h1>
+</section>
 
-    <!-- Content -->
-    <section class="content">
-        <h2>INTERIOR TO YOUR TASTE</h2>
-        <p>We create comfort and Mediterranean-inspired elegance in your home.</p>
-        <button class="btn">View More</button>
+<!-- Content -->
+<section class="content">
+<h2>INTERIOR TO YOUR TASTE</h2>
+<p>We create comfort and Mediterranean-inspired elegance in your home.</p>
+<button class="btn">View More</button>
 
-        <div class="stats">
-            <div>
-                <h3>15+</h3>
-                <span>Projects</span>
-            </div>
-            <div>
-                <h3>35+</h3>
-                <span>Customers</span>
-            </div>
-            <div>
-                <h3>97%</h3>
-                <span>Customer Retention</span>
-            </div>
-            <div>
-                <h3>50+</h3>
-                <span>Products</span>
-            </div>
-        </div>
+<div class="stats">
+<div><h3>15+</h3><span>Projects</span></div>
+<div><h3>35+</h3><span>Customers</span></div>
+<div><h3>97%</h3><span>Retention</span></div>
+<div><h3>50+</h3><span>Products</span></div>
+</div>
 
-        <div class="features">
-            <div>
-                <h4>Inside The House</h4>
-                <ul>
-                    <li>Open Mediterranean kitchen</li>
-                    <li>2 spacious bedrooms</li>
-                    <li>3 modern bathrooms</li>
-                    <li>Natural light corridors</li>
-                </ul>
-            </div>
+<div class="features">
+<div>
+<h4>Inside The House</h4>
+<ul>
+<li>Open Mediterranean kitchen</li>
+<li>2 spacious bedrooms</li>
+<li>3 modern bathrooms</li>
+<li>Natural light corridors</li>
+</ul>
+</div>
+<div>
+<h4>Outside House</h4>
+<ul>
+<li>2 car parking</li>
+<li>Private garden area</li>
+<li>Stone patio seating</li>
+<li>Luxury exterior finishing</li>
+</ul>
+</div>
+</div>
+</section>
 
-            <div>
-                <h4>Outside House</h4>
-                <ul>
-                    <li>2 car parking</li>
-                    <li>Private garden area</li>
-                    <li>Stone patio seating</li>
-                    <li>Luxury exterior finishing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- Video Section -->
+<section class="video-section">
+<h3>Our Design Showcase</h3>
+<div class="video-wrapper">
+<iframe 
+src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+title="Interior Design Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</div>
+</section>
 
-    <!-- Gallery -->
-    <section class="gallery">
-        <h3>Our Interior Projects</h3>
-        <div class="gallery-grid">
-            <img src="<https://www.vecteezy.com/photo/63124949-rustic-mediterranean-house-interior-whitewashed-walls-orange-pillows-stone-bench-open-doorway-to">
-            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80">
-            <img src="https://seekpretty.com/wp-content/uploads/2024/12/a-photo-of-a-mediterranean-style-room-wi_S5BU0JB0SJagqGgwTdWbzw_dhfBLhPfTtKBvse-Ddbn9Q.png">
-            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80">
-        </div>
-    </section>
+<!-- Gallery -->
+<section class="gallery">
+<h3>Our Interior Projects</h3>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
 
-    <!-- Contact -->
-    <section class="contact">
-        <h3>Get In Touch</h3>
-        <p>Email: info@mayurigarchitect.com</p>
-        <p>Phone: +91 990000010</p>
-    </section>
+<!-- Contact -->
+<section class="contact">
+<h3>Get In Touch</h3>
+<p>Email: info@mayurigarchitect.com</p>
+<p>Phone: +91 990000010</p>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Mayuri G Architect. All Rights Reserved.
-    </footer>
-
-    <!-- Floating Buttons -->
-    <div class="float-btn">↑</div>
-    <div class="float-btn second">☾</div>
+<footer>
+© 2026 Mayuri G Architect. All Rights Reserved.
+</footer>
 
 </div>
 
